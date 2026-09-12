@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Life Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="top-bar">
+      <!-- Challenge 1: Light / Dark Mode Toggle -->
+      <button id="theme-toggle-btn">Toggle Dark Mode</button>
+    </div>
+
+    <!-- Greeting Section -->
+    <section class="card greeting-card">
+      <div id="clock" class="clock">00:00:00</div>
+      <div id="date" class="date">Monday, January 1, 2026</div>
+      <h1 id="greeting-text">Good Morning</h1>
+      <!-- Challenge 2: Custom Name in Greeting -->
+      <div class="name-container">
+        <input type="text" id="name-input" placeholder="Enter your name...">
+        <button id="save-name-btn">Save Name</button>
+      </div>
+    </section>
+
+    <div class="dashboard-grid">
+      <!-- Focus Timer Section -->
+      <section class="card timer-card">
+        <h2>Focus Timer</h2>
+        <div id="timer-display" class="timer-display">25:00</div>
+        <div class="timer-controls">
+          <button id="start-timer">Start</button>
+          <button id="stop-timer">Stop</button>
+          <button id="reset-timer">Reset</button>
+        </div>
+      </section>
+
+      <!-- To-Do List Section -->
+      <section class="card todo-card">
+        <h2>Tasks</h2>
+        <form id="todo-form" class="input-group">
+          <input type="text" id="todo-input" placeholder="Add a new task..." required>
+          <button type="submit">Add</button>
+        </form>
+        <ul id="todo-list" class="todo-list"></ul>
+      </section>
+
+      <!-- Quick Links Section -->
+      <section class="card links-card">
+        <h2>Quick Links</h2>
+        <form id="link-form" class="input-group dual-input">
+          <input type="text" id="link-name" placeholder="Link name" required>
+          <input type="url" id="link-url" placeholder="URL (https://...)" required>
+          <button type="submit">Add Link</button>
+        </form>
+        <div id="links-container" class="links-container"></div>
+      </section>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
